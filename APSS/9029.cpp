@@ -7,11 +7,19 @@ using namespace std;
 #define MAX 200
 #define FOR(i,n) for(int (i)=1;(i)<(n);++(i))
 
+<<<<<<< HEAD
 int dp[MAX+1][MAX+1][MAX+1];
 
 int solve(int W, int L, int H) {
 	int ret = dp[W][L][H];
 	
+=======
+int dp[MAX + 1][MAX + 1][MAX + 1];
+
+int solve(int W, int L, int H) {
+	int ret = dp[W][L][H];
+
+>>>>>>> 81c56e78e130692d6af93adfed821eb30144615c
 	if (ret != INF) return ret;
 	else if (W == L && L == H) return ret = 1;
 
@@ -27,8 +35,11 @@ int solve(int W, int L, int H) {
 	return dp[W][L][H] = dp[W][H][L] = dp[L][W][H] = dp[L][H][W]
 		= dp[H][W][L] = dp[H][L][W] = ret;
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 81c56e78e130692d6af93adfed821eb30144615c
 int main() {
 
 	int testcase;
@@ -36,7 +47,11 @@ int main() {
 
 	memset(dp, INF, sizeof(dp));
 	ios_base::sync_with_stdio(false);
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> 81c56e78e130692d6af93adfed821eb30144615c
 	cin >> testcase;
 	while (testcase--) {
 		cin >> W >> L >> H;
@@ -44,4 +59,8 @@ int main() {
 	}
 
 	return 0;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 81c56e78e130692d6af93adfed821eb30144615c
