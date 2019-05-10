@@ -24,5 +24,8 @@
     <ClCompile Include="How to get input.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="solve_problem_source_check_mecro.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
