@@ -27,5 +27,8 @@
     <ClCompile Include="solve_problem_source_check_mecro.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="math.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
