@@ -18,16 +18,19 @@
     <ClCompile Include="11004.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Algorithm_Note.cpp">
+    <ClCompile Include="__solve_problem_source_check_mecro.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="How to get input.cpp">
+    <ClCompile Include="00_Algorithm_Note.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="solve_problem_source_check_mecro.cpp">
+    <ClCompile Include="01_How to get input.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="math.cpp">
+    <ClCompile Include="02_Math.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="03_Graph.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
