@@ -27,10 +27,13 @@
     <ClCompile Include="01_How to get input.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="02_Math.cpp">
+    <ClCompile Include="02_data_structure.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="03_Graph.cpp">
+    <ClCompile Include="03_Math.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="04_Graph.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
