@@ -137,13 +137,13 @@ const int inf = 0x3f3f3f3f;
 int v, e;
 vector<vector<pair<int, int>>> graph5;
 vector<int> dist;
-vector<bool> visit;
+vector<bool> d;
 int st;
 
 void dijkstra() {
 	int from, to, cost;
 
-	visit = vector<bool>(v + 1, false);
+	d = vector<bool>(v + 1, false);
 	dist = vector<int>(v + 1, inf);
 	dist[st] = 0;
 	
@@ -152,8 +152,8 @@ void dijkstra() {
 	while (!pq.empty()) {
 		from = pq.top().second;
 		pq.pop();
-		if (visit[from]) continue;
-		visit[from] = true;
+		if (d[from]) continue;
+		d[from] = true;
 		for (auto j : graph5[from]) {
 			tie(to, cost) = j;
 			if (dist[to] > dist[from] + cost) {
@@ -187,5 +187,42 @@ void Floyd_Warshal() {
 					dist_floyd[i][j] = dist_floyd[i][k] + dist_floyd[k][j];
 					from[i][j] = from[i][k];
 				}
+}
+//=============================================================================
+//SPFA ЦђБе O(E)
+#include <queue>
+using namespace std;
+
+const int inf = 0x3f3f3f3f;
+
+int v, e;
+vector < vector< pair<int, int> > > graph7;
+bool negtive_cycle = false;
+int start;
+
+void SPFA() {
+	int from, to, cost;
+	vector<int> dist(v + 1, inf);
+	vector<int> qcnt(v + 1, 0);
+	vector<bool> inq(v + 1, false);
+
+	dist[start] = 0;
+	queue<int> q;
+	q.push(start); inq[start] = true; qcnt[start]++;
+	while (!q.empty()) {
+		from = q.front();
+		q.pop(); inq[from] = false;
+
+		for (auto i : graph7[from]) {
+			tie(to, cost) = i;
+			if (dist[to] > dist[from] + cost) {
+				dist[to] = dist[from] + cost;
+				if (!inq[to]) {
+					if (qcnt[to] == v) 	negtive_cycle = true;
+					else q.push(to), inq[to] = true, qcnt[to]++;
+				}
+			}
+		}
+	}
 }
 //=============================================================================
