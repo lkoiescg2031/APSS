@@ -148,9 +148,12 @@ const int null = 0x3f3f3f3f;
 
 int n;
 vector<int> num_list;
-vector<int> tree(2 * n);
+vector<int> tree;
+//트리의 높이 H = [log N], 노드의 수 tree_size = 2^(H+1);
+//int tree_high = ceil(log2(n)); //#include <cmath>
+//int tree_size = (1 << (tree_high + 1));
 
-void init(int node, int src, int des) {
+void init(int node = 1, int src =0, int des=n-1) {
 	if (src == des) {
 		tree[node] = num_list[src];
 		return;
@@ -170,3 +173,108 @@ int query(int i, int j, //검색한 범위
 	if (right == null) return left;
 	return min(left, right);
 }
+//=================================================================================
+// RSQ
+// segment tree - 비재귀로 구현
+#include <vector>
+using namespace std;
+
+int n, terminal_node_start;
+vector<int> tree; // tree배열의 크기 n은 2^k 꼴이어야 함
+
+void terminal_node_cal() {
+	terminal_node_start = 1;
+	while (terminal_node_start <= n)terminal_node_start *= 2;
+	terminal_node_start--;
+}
+void update(int i,int num) {
+	i += terminal_node_start;
+	int diff = num - tree[i];
+	while (i > 0) tree[i] += diff, i /= 2;
+}
+int sum(int i, int j) {
+	i += terminal_node_start, j += terminal_node_start;
+	int ret = 0;
+	while (i < j) {
+		if (i % 2 == 0) i /= 2;
+		else ret += tree[i], i = (i + 1) / 2;
+		if (j % 2 == 1) j /= 2;
+		else ret += tree[j], j = (j - 1) / 2;
+	}
+	if (i == j) ret += tree[i];
+	return ret;
+}
+//=================================================================================
+//segment tree - lazy propagation
+//세그먼트 트리 구간 업데이트를 lazy propagation으로 계산
+#include <vector>
+using namespace std;
+
+int n;
+vector<int> a;
+vector<int> tree, lazy;
+
+void seg_init(int node, int start, int end) {
+	if (start == end) tree[start] = a[start];
+	else {
+		init(2*node, start, (start + end) / 2);
+		init(2 * node + 1, (start + end) / 2 + 1, end);
+		tree[node] = tree[2 * node] + tree[2 * node + 1];
+	}
+}
+void lazy_update(int node, int start, int end) {
+	if (lazy[node] != 0) {
+		tree[node] += (end - start + 1) * lazy[node];
+		if (start != end) {
+			lazy[2 * node] += lazy[node];
+			lazy[2 * node + 1] += lazy[node];
+		}
+		lazy[node] = 0;
+	} 
+}
+void update_range(int node, int start, int end, int i, int j, int diff) {
+	lazy_update(node, start, end);
+	if (end < i || j < start) return;
+	if (i <= start && end <= j) {
+		tree[node] = (end - start + 1) * diff;
+		if (start != end) {
+			lazy[2 * node] += diff;
+			lazy[2 * node + 1] += diff;
+		}
+		return;
+	}
+	update_range(2 * node, start, (start + end) / 2, i, j, diff);
+	update_range(2 * node + 1, (start + end) / 2 + 1, end, i, j, diff);
+	tree[node] = tree[2 * node] + tree[2 * node + 1];
+}
+int sum(int node, int start, int end, int i, int j) {
+	lazy_update(node, start, end);
+	if (end < i || j < start) return 0;
+	if (i <= start || end <= j) return tree[node];
+	return sum(2 * node, start, (start + end) / 2, i, j) +
+		sum(2 * node + 1, (start + end) / 2 + 1, end, i, j);
+}
+//==================================================================================
+//펜윅트리 (바이너리 인덱스 트리, BIT,Binary index tree,Fenwick tree)
+//트리의 크기는 (n+1)만큼 필요
+//차원을 늘릴경우 for문만 한번씩더 중첩시키면 된다.
+#include <vector>
+using namespace std;
+
+int n;
+vector<int> tree(n + 1);
+
+int sum(int y) {
+	int ret = 0;
+//	for (int i = x; i > 0; i -= (i & -1)) 중첩시킬경우
+	for (int i = y; i > 0; i -= (i & -1))
+		ret += tree[i];
+	return ret;
+}
+
+void update(int y,int diff) {
+//	for (int i = x; i <= n; i += (i & -i)) 중첩시킬경우
+	for (int i = y; i <= n; i += (i & -i))
+		tree[i] += diff;
+}
+//===================================================================================
