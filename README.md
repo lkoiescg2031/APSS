@@ -1,5 +1,6 @@
-# APSS
-Alogrithmic Problem Solveing Strategies  
+# APSS (Alogrithmic Problem Solveing Strategies)  
+
+## 참여자 계정 정보
 [BOJ 계정](https://www.acmicpc.net/user/lkoiescg2031)
 
 ## 안 푼 문제
