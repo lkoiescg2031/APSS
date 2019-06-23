@@ -13,31 +13,45 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="프로젝트 설명">
+      <UniqueIdentifier>{a5ce9392-8e74-46fd-816b-044d1ed4c7f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="알고리즘 노트">
+      <UniqueIdentifier>{258c067e-9e05-46b5-aefa-f6c7a51c0e8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="유틸">
+      <UniqueIdentifier>{023ae6f0-3d00-4dd3-bec4-fee1bb492b21}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="11004.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="__solve_problem_source_check_mecro.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="00_Algorithm_Note.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>알고리즘 노트</Filter>
     </ClCompile>
     <ClCompile Include="01_How to get input.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>알고리즘 노트</Filter>
     </ClCompile>
     <ClCompile Include="02_data_structure.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>알고리즘 노트</Filter>
     </ClCompile>
     <ClCompile Include="03_Math.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>알고리즘 노트</Filter>
     </ClCompile>
     <ClCompile Include="04_Graph.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>알고리즘 노트</Filter>
     </ClCompile>
     <ClCompile Include="05_Tree.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>알고리즘 노트</Filter>
     </ClCompile>
+    <ClCompile Include="__solve_problem_source_check_mecro.cpp">
+      <Filter>유틸</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Filter>프로젝트 설명</Filter>
+    </None>
   </ItemGroup>
 </Project>
