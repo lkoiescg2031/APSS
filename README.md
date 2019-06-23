@@ -1,4 +1,5 @@
 # APSS (Alogrithmic Problem Solveing Strategies)  
+알고리즘 문제 해결기법 학습을 하기 위한 목적으로 생성된 저장소
 
 ## 참여자 계정 정보
 [BOJ 계정](https://www.acmicpc.net/user/lkoiescg2031)
