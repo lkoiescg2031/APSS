@@ -1,7 +1,6 @@
 # APSS
 Alogrithmic Problem Solveing Strategies  
-[BOJ](https://www.acmicpc.net/user/lkoiescg2031)
-  
+[BOJ 계정](https://www.acmicpc.net/user/lkoiescg2031)
 
 ## 안 푼 문제
 
@@ -26,7 +25,6 @@ Alogrithmic Problem Solveing Strategies
 
 ### 완전 탐색(meet in the middle)
 [BOJ 2632](https://www.acmicpc.net/problem/2632)	[BOJ 2143](https://www.acmicpc.net/problem/2143)
-  
   
 ## 다시풀기
 [BOJ 11004](https://www.acmicpc.net/problem/11004) / [BOJ 2146](https://www.acmicpc.net/problem/2146) / [BOJ 2178](https://www.acmicpc.net/problem/2178) / [BOJ 7576](https://www.acmicpc.net/problem/7576) / [BOJ 1931](https://www.acmicpc.net/problem/1931)  
