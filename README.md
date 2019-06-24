@@ -4,6 +4,29 @@
 ## 참여자 계정 정보
 [BOJ 계정](https://www.acmicpc.net/user/lkoiescg2031)
 
+<!--
+## 학습정보
+* 입출력
+* 자료구조 
+	* string
+	* linked list
+	* queue
+	* stack
+	* deque
+	* tree
+	* graph
+* 수학
+* 정렬
+* 이분 탐색
+* 트리
+* 그래프
+* 그리디 알고리즘
+* 다이나믹 프로그래밍
+* 완전 탐색
+* BFS
+* DFS
+-->
+
 ## 안 푼 문제
 
 ### 피보나치
