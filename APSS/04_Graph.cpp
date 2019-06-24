@@ -362,3 +362,36 @@ struct MaximumFlow {
 		return ans;
 	}
 };
+//=============================================================================
+//이분 매칭(source와 sink 삭제)
+#include <vector>
+
+int n, m;
+vector<vector<int>> adj;
+
+vector<int> pre;
+vector<bool> visit;
+
+int dfs(int i) {
+	if (i == -1) return true;
+	for(auto j : adj[i])
+		if (!visit[j]) {
+			visit[j] = true;
+			if (dfs(pre[i])) {
+				pre[j] = i;
+				return true;
+			}
+		}
+	return false;
+}
+
+int flow() {
+	int ret = 0;
+	pre = vector<int>(n + m, -1);
+	visit = vector<bool>(n + m);
+	for (int i = 0; i < n; i++) {
+		fill(begin(visit), end(visit), false);
+		if (dfs(i)) ret++;
+	}
+	return ret;
+}
