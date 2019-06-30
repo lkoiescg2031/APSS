@@ -13,7 +13,10 @@
     <ClCompile Include="11377_WA.cpp">
       <Filter>Not_AC</Filter>
     </ClCompile>
-    <ClCompile Include="11004_timelimit.cpp">
+    <ClCompile Include="1420.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="11004_TLE.cpp">
       <Filter>Not_AC</Filter>
     </ClCompile>
   </ItemGroup>
