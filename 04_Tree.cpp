@@ -7,23 +7,23 @@ using namespace std;
 int v, root_node_number;
 vector<vector<int>> adj;
 vector<int> from, depth;
-queue<int> q;
+queue<int> qn;
 
 int LCA(int x,int y) {
 
 	//선행처리
 	v = adj.size();
 	from = depth = vector<int>(v + 1);
-	q.push(root_node_number);
+	qn.push(root_node_number);
 	from[root_node_number] = -1;
-	while (!q.empty()) {
-		int u = q.front();
-		q.pop();
+	while (!qn.empty()) {
+		int u = qn.front();
+		qn.pop();
 		for (auto i : adj[u]) 
 			if (from[i] == 0) {
 				from[i] = u;
 				depth[i] = depth[u] + 1;
-				q.push(i);
+				qn.push(i);
 			}
 	}
 	//LCA 부분
@@ -45,7 +45,7 @@ int v, root_node_number;
 vector<vector<int>> adj;
 
 vector<int> from, depth;
-queue<int> q;
+queue<int> qn;
 
 int parent[100001][tree_high_max];//dp[i][j] = i의 2^j번째 조상
 
@@ -54,16 +54,16 @@ int LCA(int x, int y) {
 	//선행처리
 	v = adj.size();
 	from = depth = vector<int>(v + 1);
-	q.push(root_node_number);
+	qn.push(root_node_number);
 	from[root_node_number] = -1;
-	while (!q.empty()) {
-		int u = q.front();
-		q.pop();
+	while (!qn.empty()) {
+		int u = qn.front();
+		qn.pop();
 		for (auto i : adj[u])
 			if (from[i] == 0) {
 				from[i] = u;
 				depth[i] = depth[u] + 1;
-				q.push(i);
+				qn.push(i);
 			}
 	}
 	//dp 초기화

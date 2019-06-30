@@ -5,13 +5,13 @@
 using namespace std;
 
 int n;
-vector<int> indegree;
+vector<int> ind;
 vector<vector<int>> graph;
 
 void Topological_Sort() {
 	queue<int> q;
 	for (int i = 0; i < n; i++)
-		if (indegree[i] == 0)
+		if (ind[i] == 0)
 			q.push(i);
 
 	for (int i = 0; i < n; i++) {
@@ -19,8 +19,8 @@ void Topological_Sort() {
 		q.pop();
 
 		for (auto next : graph[cur]) {
-			indegree[next]--;
-			if (indegree[next] == 0) q.push(next);
+			ind[next]--;
+			if (ind[next] == 0) q.push(next);
 		}
 	}
 }
@@ -366,32 +366,40 @@ struct MaximumFlow {
 //이분 매칭(source와 sink 삭제)
 #include <vector>
 
-int n, m;
-vector<vector<int>> adj;
-
-vector<int> pre;
-vector<bool> visit;
-
-int dfs(int i) {
-	if (i == -1) return true;
-	for(auto j : adj[i])
-		if (!visit[j]) {
-			visit[j] = true;
-			if (dfs(pre[i])) {
-				pre[j] = i;
+struct MaximumFlow {
+	int n;
+	int source, sink;
+	vector<vector<int>> graph;
+	vector<bool> check;
+	vector<int> pred;
+	MaximumFlow(int n) : n(n) {
+		graph.resize(n);
+		check.resize(n);
+		pred.resize(n, -1);
+	};
+	void add_edge(int u, int v) {
+		graph[u].push_back(v);
+	}
+	bool dfs(int x) {
+		if (x == -1) return true;
+		for (int next : graph[x]) {
+			if (check[next]) continue;
+			check[next] = true;
+			if (dfs(pred[next])) {
+				pred[next] = x;
 				return true;
 			}
 		}
-	return false;
-}
-
-int flow() {
-	int ret = 0;
-	pre = vector<int>(n + m, -1);
-	visit = vector<bool>(n + m);
-	for (int i = 0; i < n; i++) {
-		fill(begin(visit), end(visit), false);
-		if (dfs(i)) ret++;
+		return false;
 	}
-	return ret;
-}
+	int flow() {
+		int ans = 0;
+		for (int i = 0; i < n; i++) {
+			fill(check.begin(), check.end(), false);
+			if (dfs(i)) {
+				ans += 1;
+			}
+		}
+		return ans;
+	}
+};
