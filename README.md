@@ -10,7 +10,7 @@
 
 ## 학습 로드 맵
 ![PS ROAD MAP](https://github.com/lkoiescg2031/APSS/blob/master/Algorithm%20PS%20Roadmap_v0.1.png)
-
+출처 : <https://stack07142.tistory.com/228>
 ### 학습한 챕터
 * 입출력
 * 자료구조 
@@ -39,4 +39,4 @@
 * 플로이드-와샬
 
 ### 기타 링크
-[BOJ 학습 정보] (https://github.com/lkoiescg2031/APSS/blob/master/Baekjoon%20Online%20Judge/README.md)
+[BOJ 학습 정보](https://github.com/lkoiescg2031/APSS/blob/master/Baekjoon%20Online%20Judge/README.md)
