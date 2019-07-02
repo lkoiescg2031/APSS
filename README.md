@@ -8,9 +8,10 @@
 [SW Expert Academy](https://swexpertacademy.com/main/main.do) 
 [Programmers](https://programmers.co.kr/learn/challenges) - github 연동
 
-# 학습 로드 맵
+## 학습 로드 맵
 ![PS ROAD MAP](https://github.com/lkoiescg2031/APSS/blob/master/Algorithm%20PS%20Roadmap_v0.1.png)
-## 학습한 챕터
+
+### 학습한 챕터
 * 입출력
 * 자료구조 
 	* string
@@ -24,6 +25,7 @@
 * 수학
 * 정렬
 * 탐색
+	* Brute Force
 	* 이분 탐색
 	* 완전 탐색 (BFS)
 	* 완전 탐색 (DFS)
@@ -33,6 +35,8 @@
 * 그리디 알고리즘
 * 다이나믹 프로그래밍
 * 분할 정복
-* Brute Force
 * 시뮬레이션
 * 플로이드-와샬
+
+### 기타 링크
+[BOJ 학습 정보] (https://github.com/lkoiescg2031/APSS/blob/master/Baekjoon%20Online%20Judge/README.md)
