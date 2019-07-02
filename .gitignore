@@ -20,3 +20,6 @@ Baekjoon Online Judge/Debug/1420.obj
 .vs/APSS/v16/ipch/AutoPCH/b89d673af023f3b/06_MATH.ipch
 .vs/APSS/v16/ipch/AutoPCH/29807dd784e5304f/04_TREE.ipch
 .vs/APSS/v16/Browse.VC.opendb
+*.obj
+*.enc
+*.ipch
