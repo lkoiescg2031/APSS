@@ -10,4 +10,5 @@
 *.hwp
 *.db
 *.db
-.vs/APSS/v16/.suo
+*.suo
+*.gitignore
