@@ -7,3 +7,7 @@
 *.idb
 *.tlog
 *.log
+*.hwp
+*.db
+*.db
+.vs/APSS/v16/.suo
