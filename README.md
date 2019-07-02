@@ -9,7 +9,7 @@
 [Programmers](https://programmers.co.kr/learn/challenges) - github 연동
 
 ## 학습 로드 맵
-![PS ROAD MAP](https://github.com/lkoiescg2031/APSS/blob/master/Algorithm%20PS%20Roadmap_v0.1.png)
+![PS ROAD MAP](https://github.com/lkoiescg2031/APSS/blob/master/Roadmap.png)
 출처 : <https://stack07142.tistory.com/228>
   
 ## 학습한 챕터
@@ -17,27 +17,36 @@
 * 자료구조 
 	* string
 	* linked list
-	* queue
 	* stack
+	* queue
 	* deque
+	* disjoint Set (Union-Find)
 	* tree
+		* Heap (Min Heap, Max Heap)
+		* Segment Tree
+		* Fenwick Tree (aka BIT = Binary Indexed Tree)
+		* Binary Search Tree
 	* graph
-	* disjoint-set
 * 수학
 * 정렬
-* 탐색
+	* Bubble sort
+* Exhaustive Search
 	* Brute Force
 	* 이분 탐색
-	* 완전 탐색 (BFS)
-	* 완전 탐색 (DFS)
 	* 완전 탐색 (BitMask)
+* 시뮬레이션
 * 트리
 * 그래프
+	* Breadth-First Search (BFS)
+	* Depth-First Search (DFS)
 * 그리디 알고리즘
 * 다이나믹 프로그래밍
 * 분할 정복
-* 시뮬레이션
-* 플로이드-와샬
+* Shortest Path
+	* Floyd-Warshall
+	* Dijkstra
+	* Bellman-Ford
+	* SPFA (Shortest Path Faster Algorithm)
   
 ## 저장소 내 링크
 [BOJ 학습 정보](https://github.com/lkoiescg2031/APSS/blob/master/Baekjoon%20Online%20Judge/README.md)  
