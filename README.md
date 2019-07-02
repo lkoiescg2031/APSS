@@ -8,12 +8,11 @@
 [SW Expert Academy](https://swexpertacademy.com/main/main.do) 
 [Programmers](https://programmers.co.kr/learn/challenges) - github 연동
 
-## 학습 로드 맵
-![PS ROAD MAP](https://github.com/lkoiescg2031/APSS/blob/master/Roadmap.png)
-출처 : <https://stack07142.tistory.com/228>
-  
-## 학습한 챕터
+## 학습한 챕터  
 * 입출력
+	* C / C++ 문법
+	* JAVA 문법
+  
 * 자료구조 
 	* string
 	* linked list
@@ -27,26 +26,79 @@
 		* Fenwick Tree (aka BIT = Binary Indexed Tree)
 		* Binary Search Tree
 	* graph
-* 수학
+* 수학 #1
+	* Permutation
+	* Combination
+	* Prime Number
+		*Eratosthenees seula
+	* GCD, LCM
+		* Eucliedean algorithm
+	* Matrix
+  
+* 그리디 알고리즘
+* 비트마스크
+* Exhaustive Search
+	* Brute-Force
+	* Backtracking
+		* N Queens
+	* Optimization Proglems
+		* TSP
+	* Divide & Conquer
+		* Binary Search
+  
+* Dynamic Programming (DP)
+	* 0-1 knapsack Proglem
+	* LCS,LIS,...
+	* Subset
+* 문자열
+	* Palindrome
+  
+* Minimum Spanning Tree (MST)
+	* Kruskal's Algorithm
+	* Prims's Algorithm
 * 정렬
 	* Bubble sort
-* Exhaustive Search
-	* Brute Force
-	* 이분 탐색
-	* 완전 탐색 (BitMask)
-* 시뮬레이션
+	* Insertion Sort
+	* Selection Sort
+	* Quick Sort
+	* Merge Sort
+	* Heap Sort
+* 그래프 #1
+	* Search
+		* Breadth-First Search (BFS)
+		* Depth-First Search (DFS)
+	* Shortest Path
+		* Single Source Shortest Path
+			* Dijkstra's Algorithm
+			* Bellman-Ford Algorithm
+			* Shortest Path Faster Algorithm (SPFA)
+		* Floyd-Warshall Algorithm
+	* 위상정렬(Topological Sort)
+  
+* 수학 #2
+	* 이항계수 (Binomial coefficient)
+		* 파스칼의 삼각형 (Pascal's triangle)
+	* 카탈란 수 (Catalan Number)
+	* 오일러 피함수 (Eular's phi function)
+  
 * 트리
-* 그래프
-	* Breadth-First Search (BFS)
-	* Depth-First Search (DFS)
-* 그리디 알고리즘
-* 다이나믹 프로그래밍
-* 분할 정복
-* Shortest Path
-	* Floyd-Warshall
-	* Dijkstra
-	* Bellman-Ford
-	* SPFA (Shortest Path Faster Algorithm)
+	* Lowest Common Ancestor (LCA)
+* Range Query
+	* Segment Tree
+		* Lazy Propagation
+	* Two Pointers Algorithm
+	* Sliding Window Algorithm
+  
+* 그래프 #2
+	* Network Flow
+		* Maximum Flow
+			* Ford- Fulkerson
+			* Edmond-Karp
+		* Bipartite Matching
+  
+## 학습 로드 맵
+![PS ROADMAP](https://github.com/lkoiescg2031/APSS/blob/master/Roadmap.png)
+출처 : <https://stack07142.tistory.com/228>
   
 ## 저장소 내 링크
 [BOJ 학습 정보](https://github.com/lkoiescg2031/APSS/blob/master/Baekjoon%20Online%20Judge/README.md)  
