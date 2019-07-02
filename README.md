@@ -39,5 +39,5 @@
 * 플로이드-와샬
 
 ### 기타 링크
-[BOJ 학습 정보](https://github.com/lkoiescg2031/APSS/blob/master/Baekjoon%20Online%20Judge/README.md)
-[Programming Challenges 학습정보](https://github.com/lkoiescg2031/APSS/blob/master/Programming%20Challenges/README.md)
+[BOJ 학습 정보](https://github.com/lkoiescg2031/APSS/blob/master/Baekjoon%20Online%20Judge/README.md)  
+[Programming Challenges 학습정보](https://github.com/lkoiescg2031/APSS/blob/master/Programming%20Challenges/README.md)  
