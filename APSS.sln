@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "README", "README", "{59FE683F-DFE3-48C1-A9F3-FDA4A79C9113}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
+		Roadmap.png = Roadmap.png
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Algorithm_Note", "Algorithm_Note", "{80C7A6C7-755C-496A-A822-334E5E262858}"
