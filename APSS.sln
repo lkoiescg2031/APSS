@@ -24,7 +24,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Algorithm_Note", "Algorithm
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Programming Challenges", "Programming Challenges\Programming Challenges.vcxproj", "{7A21AD3A-DB23-471A-B2FE-B0D131FEEB74}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2019 SDS 알고리즘 특강", "2019 SDS 알고리즘 특강\2019 SDS 알고리즘 특강.vcxproj", "{4728CCE4-21E6-4AF4-9672-DD35AE8CD82B}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2019 SDS 알고리즘 특강 입과테스트", "2019 SDS 알고리즘 특강 입과테스트\2019 SDS 알고리즘 특강 입과테스트.vcxproj", "{4728CCE4-21E6-4AF4-9672-DD35AE8CD82B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
