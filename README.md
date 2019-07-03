@@ -16,6 +16,8 @@
 	* C / C++ 문법
 	* JAVA 문법
   
+  
+  
 * 자료구조 
 	* string
 	* linked list
@@ -38,6 +40,8 @@
 		* Eucliedean algorithm
 	* Matrix
   
+  
+  
 * 그리디 알고리즘
 * 비트마스크
 * Exhaustive Search
@@ -55,6 +59,8 @@
 	* Subset
 * 문자열
 	* Palindrome
+  
+  
   
 * Minimum Spanning Tree (MST)
 	* Kruskal's Algorithm
@@ -78,11 +84,15 @@
 		* Floyd-Warshall Algorithm
 	* 위상정렬(Topological Sort)
   
+  
+  
 * 수학 #2
 	* 이항계수 (Binomial coefficient)
 		* 파스칼의 삼각형 (Pascal's triangle)
 	* 카탈란 수 (Catalan Number)
 	* 오일러 피함수 (Eular's phi function)
+  
+  
   
 * 트리
 	* Lowest Common Ancestor (LCA)
@@ -98,6 +108,8 @@
 			* Ford- Fulkerson
 			* Edmond-Karp
 		* Bipartite Matching
+  
+  
   
 ## 학습 로드 맵
 ![PS ROADMAP](https://github.com/lkoiescg2031/APSS/blob/master/Roadmap.png)
