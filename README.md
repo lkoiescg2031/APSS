@@ -21,17 +21,17 @@
 	* queue
 	* deque
 	* disjoint Set (Union-Find)
-	* tree
+	* 트리 #1
 		* Heap (Min Heap, Max Heap)
 		* Segment Tree
 		* Fenwick Tree (aka BIT = Binary Indexed Tree)
 		* Binary Search Tree
-	* graph
+	* 그래프
 * 수학 #1
 	* Permutation
 	* Combination
 	* Prime Number
-		*Eratosthenees seula
+		* Eratosthenees seula
 	* GCD, LCM
 		* Eucliedean algorithm
 	* Matrix
@@ -63,6 +63,7 @@
 	* Merge Sort
 	* Heap Sort
 * 그래프 #1
+	* Graph Modeling
 	* Search
 		* Breadth-First Search (BFS)
 		* Depth-First Search (DFS)
@@ -76,9 +77,9 @@
 * 수학 #2
 	* 이항계수 (Binomial coefficient)
 		* 파스칼의 삼각형 (Pascal's triangle)
-	* 카탈란 수 (Catalan Number)
-	* 오일러 피함수 (Eular's phi function)
-* 트리
+<!--* 카탈란 수 (Catalan Number)
+	* 오일러 피함수 (Eular's phi function)-->
+* 트리 #2
 	* Lowest Common Ancestor (LCA)
 * Range Query
 	* Segment Tree
@@ -91,6 +92,14 @@
 		* Maximum Flow
 			* Ford- Fulkerson
 			* Edmond-Karp
+		* Minimum Cut Maximum Flow
+		* 최소 버텍스 커버(Minimum Vertex Cover)
+			* Konigs theorem
+		* 최대 독립 집합 (Maximum Independent Set)
+		* Minimun Cost Maximum Flow (MCMF)
+			* Using Bellman-Ford Algorithm of SPFA
+			* Using Dijkstra Algorithm with potential
+<!--		* Cycle Canceling-->
 		* Bipartite Matching
 ## 학습 로드 맵
 ![PS ROADMAP](https://github.com/lkoiescg2031/APSS/blob/master/Roadmap.png)
