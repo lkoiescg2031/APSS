@@ -423,7 +423,7 @@ struct MCMF {
 	vector<bool> check;
 	vector<int> distance;
 	vector<pair<int, int>> from;
-	int inf = 10000000;
+	const static int inf = 0x3f3f3f3f;
 	MCMF(int n, int source, int sink) : n(n), source(source), sink(sink) {
 		graph.resize(n);
 		check.resize(n);
@@ -517,7 +517,7 @@ struct MCMF {
 	vector<bool> check;
 	vector<int> distance;
 	vector<pair<int, int>> from;
-	int inf = 10000000;
+	const static int inf = 0x3f3f3f3f;
 	MCMF(int n, int source, int sink) : n(n), source(source), sink(sink) {
 		graph.resize(n);
 		check.resize(n);
@@ -593,6 +593,7 @@ struct MCMF {
 };
 //================================================================================
 //MCMF Dijkstra
+
 #include <queue>
 #include <vector>
 using namespace std;
@@ -612,12 +613,12 @@ struct MCMF {
 	vector<bool> check;
 	vector<int> distance;
 	vector<int> potential;
-	vector<pair<int, int>> from;
-	int inf = 10000000;
+	vector<Vertex> from;
+	const static int inf = 0x3f3f3f3f;
 	MCMF(int n, int source, int sink) : n(n), source(source), sink(sink) {
 		graph.resize(n);
 		check.resize(n);
-		from.resize(n, make_pair(-1, -1));
+		from.resize(n);
 		distance.resize(n);
 		potential.resize(n);
 	};
@@ -635,12 +636,14 @@ struct MCMF {
 	void add_edge_to_sink(int u, int cap, int cost) {
 		add_edge(u, sink, cap, cost);
 	}
-	bool spfa() {
+	void spfa() {
 		fill(check.begin(), check.end(), false);
 		fill(distance.begin(), distance.end(), inf);
-		distance[source] = 0;
+
 		queue<int> q;
 		q.push(source);
+		distance[source] = 0;
+
 		while (!q.empty()) {
 			int x = q.front();
 			q.pop();
@@ -651,31 +654,33 @@ struct MCMF {
 				if (e->capacity > 0 && distance[x] + e->cost < distance[y]) {
 					distance[y] = distance[x] + e->cost;
 					from[y] = make_pair(x, i);
-					if (!check[y]) {
-						check[y] = true;
-						q.push(y);
-					}
+					if (check[y]) continue;
+					check[y] = true;
+					q.push(y);
 				}
 			}
 		}
-		for (int i = 0; i < n; i++) {
-			potential[i] = distance[i];
-		}
-		return true;
+		for (int i = 0; i < n; i++) potential[i] = distance[i];
 	}
 	bool dijkstra(int& total_flow, int& total_cost) {
-		priority_queue<Vertex, vector<Vertex>, greater<Vertex>> q;
+
 		fill(distance.begin(), distance.end(), inf);
 		fill(check.begin(), check.end(), false);
 		fill(from.begin(), from.end(), make_pair(-1, -1));
+
+		priority_queue<Vertex, vector<Vertex>, greater<Vertex>> q;
 		distance[source] = 0;
 		q.push(make_pair(0, source));
+
 		while (!q.empty()) {
 			int x = q.top().second;
 			q.pop();
+
 			if (check[x]) continue;
 			check[x] = true;
+
 			if (x == sink) continue;
+
 			for (int i = 0; i < graph[x].size(); i++) {
 				auto e = graph[x][i];
 				int y = e->to;
@@ -687,33 +692,26 @@ struct MCMF {
 			}
 		}
 		if (distance[sink] == inf) return false;
-		for (int i = 0; i < n; i++) 
+
+		for (int i = 0; i < n; i++)
 			if (distance[i] != inf) potential[i] += distance[i];
 
-		int x = sink;
-		int c = graph[from[x].first][from[x].second]->capacity;
-		while (from[x].first != -1) {
-			if (c > graph[from[x].first][from[x].second]->capacity) {
-				c = graph[from[x].first][from[x].second]->capacity;
-			}
-			x = from[x].first;
-		}
+		int c = inf;
+		for (int x = sink; from[x].first != -1; x = from[x].first)
+			c = min(c, graph[from[x].first][from[x].second]->capacity);
 
-		x = sink;
-		while (from[x].first != -1) {
+
+		for (int x = sink; from[x].first != -1; x = from[x].first) {
 			Edge* e = graph[from[x].first][from[x].second];
 			e->capacity -= c;
 			e->rev->capacity += c;
 			total_cost += e->cost * c;
-			x = from[x].first;
 		}
-
 		total_flow += c;
 		return true;
 	}
 	pair<int, int> flow() {
-		int total_flow = 0;
-		int total_cost = 0;
+		int total_flow = 0, total_cost = 0;
 		spfa();
 		while (dijkstra(total_flow, total_cost));
 		return make_pair(total_flow, total_cost);

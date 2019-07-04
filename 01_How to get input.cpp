@@ -20,7 +20,7 @@ int main() {
 	std::getline(std::cin, str);
 
 	//파일의 끝까지 입력받는법
-	while (scanf("%d", &a));
+	while (scanf("%d", &a) != EOF);
 	while (std::cin >> a);
 
 
