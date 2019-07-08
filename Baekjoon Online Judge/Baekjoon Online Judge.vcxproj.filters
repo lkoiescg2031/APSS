@@ -13,9 +13,6 @@
     <ClCompile Include="11377_WA.cpp">
       <Filter>Not_AC</Filter>
     </ClCompile>
-    <ClCompile Include="11004_TLE.cpp">
-      <Filter>Not_AC</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
