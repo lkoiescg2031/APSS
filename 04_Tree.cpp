@@ -255,7 +255,7 @@ int sum(int node, int start, int end, int i, int j) {
 		sum(2 * node + 1, (start + end) / 2 + 1, end, i, j);
 }
 //==================================================================================
-//펜윅트리 (바이너리 인덱스 트리, BIT,Binary index tree,Fenwick tree)
+//RSQ 펜윅트리 (바이너리 인덱스 트리, BIT, Binary index tree, Fenwick tree)
 //트리의 크기는 (n+1)만큼 필요
 //차원을 늘릴경우 for문만 한번씩더 중첩시키면 된다.
 #include <vector>
@@ -266,8 +266,8 @@ vector<int> tree(n + 1);
 
 int sum(int y) {
 	int ret = 0;
-//	for (int i = x; i > 0; i -= (i & -1)) 중첩시킬경우
-	for (int i = y; i > 0; i -= (i & -1))
+//	for (int i = x; i > 0; i -= (i & -i)) 중첩시킬경우
+	for (int i = y; i > 0; i -= (i & -i))
 		ret += tree[i];
 	return ret;
 }

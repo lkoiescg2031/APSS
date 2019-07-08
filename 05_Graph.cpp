@@ -422,12 +422,12 @@ struct MCMF {
 	vector<vector<Edge*>> graph;
 	vector<bool> check;
 	vector<int> distance;
-	vector<pair<int, int>> from;
+	vector<pair<int, int>> pre;
 	const static int inf = 0x3f3f3f3f;
 	MCMF(int n, int source, int sink) : n(n), source(source), sink(sink) {
 		graph.resize(n);
 		check.resize(n);
-		from.resize(n, make_pair(-1, -1));
+		pre.resize(n, make_pair(-1, -1));
 		distance.resize(n);
 	};
 	void add_edge(int u, int v, int cap, int cost) {
@@ -447,7 +447,7 @@ struct MCMF {
 	bool bellman(int& total_flow, int& total_cost) {
 		fill(check.begin(), check.end(), false);
 		fill(distance.begin(), distance.end(), inf);
-		fill(from.begin(), from.end(), make_pair(-1, -1));
+		fill(pre.begin(), pre.end(), make_pair(-1, -1));
 		distance[source] = 0;
 		for (int step = 0; step < n - 1; step++) {
 			for (int i = 0; i < n; i++) {
@@ -463,7 +463,7 @@ struct MCMF {
 					}
 					if (distance[y] > distance[x] + e->cost) {
 						distance[y] = distance[x] + e->cost;
-						from[y] = make_pair(i, j);
+						pre[y] = make_pair(i, j);
 					}
 				}
 			}
@@ -472,19 +472,19 @@ struct MCMF {
 			return false;
 		}
 		int x = sink;
-		int c = graph[from[x].first][from[x].second]->capacity;
-		while (from[x].first != -1) {
-			if (c > graph[from[x].first][from[x].second]->capacity) {
-				c = graph[from[x].first][from[x].second]->capacity;
+		int c = graph[pre[x].first][pre[x].second]->capacity;
+		while (pre[x].first != -1) {
+			if (c > graph[pre[x].first][pre[x].second]->capacity) {
+				c = graph[pre[x].first][pre[x].second]->capacity;
 			}
-			x = from[x].first;
+			x = pre[x].first;
 		}
 		x = sink;
-		while (from[x].first != -1) {
-			Edge* e = graph[from[x].first][from[x].second];
+		while (pre[x].first != -1) {
+			Edge* e = graph[pre[x].first][pre[x].second];
 			e->capacity -= c;
 			e->rev->capacity += c;
-			x = from[x].first;
+			x = pre[x].first;
 		}
 		total_flow += c;
 		total_cost += c * distance[sink];
@@ -502,93 +502,90 @@ struct MCMF {
 #include <queue>
 #include <tuple>
 using namespace std;
-struct MCMF {
-	struct Edge {
-		int to;
-		int capacity;
-		int cost;
-		Edge* rev;
-		Edge(int to, int capacity, int cost) : to(to), capacity(capacity), cost(cost) {
-		}
-	};
-	int n;
-	int source, sink;
-	vector<vector<Edge*>> graph;
-	vector<bool> check;
-	vector<int> distance;
-	vector<pair<int, int>> from;
-	const static int inf = 0x3f3f3f3f;
-	MCMF(int n, int source, int sink) : n(n), source(source), sink(sink) {
+
+class MCMF {
+public:
+	const static int INF = 0x3f3f3f3f;
+	MCMF(int n, int s, int t) : n(n), source(s), sink(t) {
 		graph.resize(n);
-		check.resize(n);
-		from.resize(n, make_pair(-1, -1));
-		distance.resize(n);
+		inq.resize(n);
+		dist.resize(n);
+		pre.resize(n);
 	};
-	void add_edge(int u, int v, int cap, int cost) {
-		Edge* ori = new Edge(v, cap, cost);
+	void add_edge(int u, int v, int capacity, int cost) {
+		Edge* ori = new Edge(v, capacity, cost);
 		Edge* rev = new Edge(u, 0, -cost);
 		ori->rev = rev;
 		rev->rev = ori;
 		graph[u].push_back(ori);
 		graph[v].push_back(rev);
 	}
-	void add_edge_from_source(int v, int cap, int cost) {
-		add_edge(source, v, cap, cost);
+	void add_edge_from_source(int v, int capacity, int cost) {
+		add_edge(source, v, capacity, cost);
 	}
-	void add_edge_to_sink(int u, int cap, int cost) {
-		add_edge(u, sink, cap, cost);
+	void add_edge_to_sink(int u, int capacity, int cost) {
+		add_edge(u, sink, capacity, cost);
 	}
+	pair<int, int> flow() {
+		int total_flow = 0, total_cost = 0;
+		while (spfa(total_flow, total_cost));
+		return make_pair(total_flow, total_cost);
+	}
+private:
+	struct Edge {
+		int to, capacity, cost;
+		Edge* rev;
+		Edge(int to, int capacity, int cost)
+			: to(to), cost(cost), capacity(capacity), rev(nullptr) {}
+	};
+	using Vertex = pair<int, int>;
+	int n;
+	int source, sink;
+	vector<vector<Edge*>> graph;
+	vector<bool> inq;
+	vector<int> dist;
+	vector<Vertex> pre;
 	bool spfa(int& total_flow, int& total_cost) {
-		fill(check.begin(), check.end(), false);
-		fill(distance.begin(), distance.end(), inf);
-		fill(from.begin(), from.end(), make_pair(-1, -1));
-		distance[source] = 0;
+
+		fill(begin(inq), end(inq), false);
+		fill(begin(pre), end(pre), make_pair(-1, -1));
+		fill(begin(dist), end(dist), INF);
+
 		queue<int> q;
 		q.push(source);
+		inq[source] = true;
+		dist[source] = 0;
+
 		while (!q.empty()) {
-			int x = q.front();
+			int cur = q.front();
 			q.pop();
-			check[x] = false;
-			for (int i = 0; i < graph[x].size(); i++) {
-				auto e = graph[x][i];
-				int y = e->to;
-				if (e->capacity > 0 && distance[x] + e->cost < distance[y]) {
-					distance[y] = distance[x] + e->cost;
-					from[y] = make_pair(x, i);
-					if (!check[y]) {
-						check[y] = true;
-						q.push(y);
-					}
+			inq[cur] = false;
+			for (int i = 0; i < graph[cur].size(); i++) {
+				auto e = graph[cur][i];
+				int next = e->to;
+				if (e->capacity > 0 && dist[next] > dist[cur] + e->cost) {
+					dist[next] = dist[cur] + e->cost;
+					pre[next] = make_pair(cur, i);
+					if (inq[next]) continue;
+					q.push(next);
+					inq[next] = true;
 				}
 			}
 		}
-		if (distance[sink] == inf) {
-			return false;
+
+		if (dist[sink] == INF) return false;
+
+		int min_flow = INF;
+		for (int i = sink; pre[i].first != -1; i = pre[i].first)
+			min_flow = min(min_flow, graph[pre[i].first][pre[i].second]->capacity);
+		for (int i = sink; pre[i].first != -1; i = pre[i].first) {
+			auto e = graph[pre[i].first][pre[i].second];
+			e->capacity -= min_flow;
+			e->rev->capacity += min_flow;
 		}
-		int x = sink;
-		int c = graph[from[x].first][from[x].second]->capacity;
-		while (from[x].first != -1) {
-			if (c > graph[from[x].first][from[x].second]->capacity) {
-				c = graph[from[x].first][from[x].second]->capacity;
-			}
-			x = from[x].first;
-		}
-		x = sink;
-		while (from[x].first != -1) {
-			Edge* e = graph[from[x].first][from[x].second];
-			e->capacity -= c;
-			e->rev->capacity += c;
-			x = from[x].first;
-		}
-		total_flow += c;
-		total_cost += c * distance[sink];
+		total_flow += min_flow;
+		total_cost += dist[sink] * min_flow;
 		return true;
-	}
-	pair<int, int> flow() {
-		int total_flow = 0;
-		int total_cost = 0;
-		while (spfa(total_flow, total_cost));
-		return make_pair(total_flow, total_cost);
 	}
 };
 //================================================================================
@@ -613,12 +610,12 @@ struct MCMF {
 	vector<bool> check;
 	vector<int> distance;
 	vector<int> potential;
-	vector<Vertex> from;
+	vector<Vertex> pre;
 	const static int inf = 0x3f3f3f3f;
 	MCMF(int n, int source, int sink) : n(n), source(source), sink(sink) {
 		graph.resize(n);
 		check.resize(n);
-		from.resize(n);
+		pre.resize(n);
 		distance.resize(n);
 		potential.resize(n);
 	};
@@ -653,7 +650,7 @@ struct MCMF {
 				int y = e->to;
 				if (e->capacity > 0 && distance[x] + e->cost < distance[y]) {
 					distance[y] = distance[x] + e->cost;
-					from[y] = make_pair(x, i);
+					pre[y] = make_pair(x, i);
 					if (check[y]) continue;
 					check[y] = true;
 					q.push(y);
@@ -666,7 +663,7 @@ struct MCMF {
 
 		fill(distance.begin(), distance.end(), inf);
 		fill(check.begin(), check.end(), false);
-		fill(from.begin(), from.end(), make_pair(-1, -1));
+		fill(pre.begin(), pre.end(), make_pair(-1, -1));
 
 		priority_queue<Vertex, vector<Vertex>, greater<Vertex>> q;
 		distance[source] = 0;
@@ -686,7 +683,7 @@ struct MCMF {
 				int y = e->to;
 				if (e->capacity > 0 && distance[y] > distance[x] + e->cost - potential[y] + potential[x]) {
 					distance[y] = distance[x] + e->cost - potential[y] + potential[x];
-					from[y] = make_pair(x, i);
+					pre[y] = make_pair(x, i);
 					q.push(make_pair(distance[y], y));
 				}
 			}
@@ -697,12 +694,12 @@ struct MCMF {
 			if (distance[i] != inf) potential[i] += distance[i];
 
 		int c = inf;
-		for (int x = sink; from[x].first != -1; x = from[x].first)
-			c = min(c, graph[from[x].first][from[x].second]->capacity);
+		for (int x = sink; pre[x].first != -1; x = pre[x].first)
+			c = min(c, graph[pre[x].first][pre[x].second]->capacity);
 
 
-		for (int x = sink; from[x].first != -1; x = from[x].first) {
-			Edge* e = graph[from[x].first][from[x].second];
+		for (int x = sink; pre[x].first != -1; x = pre[x].first) {
+			Edge* e = graph[pre[x].first][pre[x].second];
 			e->capacity -= c;
 			e->rev->capacity += c;
 			total_cost += e->cost * c;
