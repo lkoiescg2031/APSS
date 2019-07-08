@@ -1,46 +1,46 @@
 # Baekjoon Online Judge
 <https://www.acmicpc.net/>
 
-# ½ÃµµÇÏÁö ¾ÊÀº ¹®Á¦
+# ì‹œë„í•˜ì§€ ì•Šì€ ë¬¸ì œ
 
-## ÇÇº¸³ªÄ¡
+## í”¼ë³´ë‚˜ì¹˜
 [BOJ 10870](https://www.acmicpc.net/problem/10870) / [BOJ 1788](https://www.acmicpc.net/problem/1788) / [BOJ 9471](https://www.acmicpc.net/problem/9471) / [BOJ 2086](https://www.acmicpc.net/problem/2086) / [BOJ 11440](https://www.acmicpc.net/problem/11440)  
 [BOJ 11442](https://www.acmicpc.net/problem/11442) / [BOJ 11443](https://www.acmicpc.net/problem/11443) / [BOJ 11778](https://www.acmicpc.net/problem/11778)
 
-## ÀÌÇ×°è¼ö
+## ì´í•­ê³„ìˆ˜
 [BOJ 11439](https://www.acmicpc.net/problem/11439)
 
-## ·òÄ«ÀÇ Á¤¸®
+## ë¤¼ì¹´ì˜ ì •ë¦¬
 [BOJ 11402](https://www.acmicpc.net/problem/11402)
 
-## Ä«Å»¶õ ¼ö
+## ì¹´íƒˆë€ ìˆ˜
 [BOJ 10422](https://www.acmicpc.net/problem/10422)
 
-## È®Àå À¯Å¬¸®µå 
+## í™•ì¥ ìœ í´ë¦¬ë“œ 
 [BOJ 11501](https://www.acmicpc.net/problem/11501) / [BOJ 11661](https://www.acmicpc.net/problem/11661)
 
-## Áß±¹ÀÎ ³ª¸ÓÁö Á¤¸®
+## ì¤‘êµ­ì¸ ë‚˜ë¨¸ì§€ ì •ë¦¬
 [BOJ 1476](https://www.acmicpc.net/problem/1476) / [BOJ 5051](https://www.acmicpc.net/problem/5051) / [BOJ 5621](https://www.acmicpc.net/problem/5621)
 
-## ¿ÏÀü Å½»ö(meet in the middle)
+## ì™„ì „ íƒìƒ‰(meet in the middle)
 [BOJ 2632](https://www.acmicpc.net/problem/2632) / [BOJ 2143](https://www.acmicpc.net/problem/2143)
 
 ## MCMF
 [BOJ 10786](https://www.acmicpc.net/problem/10786)
 
-# ³ªÀÇ ÄÚµå
+# ë‚˜ì˜ ì½”ë“œ
 
-## ¿Ö Æ²·Ç´ÂÁö ¸ğ¸£´Â ÄÚµå
+## ì™œ í‹€ë ·ëŠ”ì§€ ëª¨ë¥´ëŠ” ì½”ë“œ
 * [BOJ 11377](https://www.acmicpc.net/problem/11377) 
-°á°ú : WA [³» ÄÚµå º¸±â](https://github.com/lkoiescg2031/APSS/blob/master/Baekjoon%20Online%20Judge/11377_WA.cpp)  
+ê²°ê³¼ : WA [ë‚´ ì½”ë“œ ë³´ê¸°](https://github.com/lkoiescg2031/APSS/blob/master/Baekjoon%20Online%20Judge/11377_WA.cpp)  
 
-## ÇØ°áÇÑ ÄÚµå
+## í•´ê²°í•œ ì½”ë“œ
 * [BOJ 11004](https://www.acmicpc.net/problem/11004)   
-[³» ÄÚµå º¸±â] (https://github.com/lkoiescg2031/APSS/blob/master/Baekjoon%20Online%20Judge/11004.cpp)
-ÇØ°á ¹æ¹ı : 16¶óÀÎÀÇ pivot_value¿Í ºñ±³ ½Ã µîÈ£°¡ Á¸ÀçÇÏ¿©¾ß ÇÔ
-	(Á¸ÀçÇÏÁö ¾Ê´Â °æ¿ì Á¤·ÄÀº Á¤»óÀûÀ¸·Î ÀÛµ¿ÇÏ³ª O(n^2)¸¸Å­ ¼öÇà ½Ã°£ÀÌ °É¸²)
+[ë‚´ ì½”ë“œ ë³´ê¸°] (https://github.com/lkoiescg2031/APSS/blob/master/Baekjoon%20Online%20Judge/11004.cpp)  
+í•´ê²° ë°©ë²• : 16ë¼ì¸ì˜ pivot_valueì™€ ë¹„êµ ì‹œ ë“±í˜¸ê°€ ì¡´ì¬í•˜ì—¬ì•¼ í•¨
+	(ì¡´ì¬í•˜ì§€ ì•ŠëŠ” ê²½ìš° ì •ë ¬ì€ ì •ìƒì ìœ¼ë¡œ ì‘ë™í•˜ë‚˜ O(n^2)ë§Œí¼ ìˆ˜í–‰ ì‹œê°„ì´ ê±¸ë¦¼)
 	  
-# ´Ù½Ã Ç®¾îº¸±â
+# ë‹¤ì‹œ í’€ì–´ë³´ê¸°
 [BOJ 11004](https://www.acmicpc.net/problem/11004) / [BOJ 2146](https://www.acmicpc.net/problem/2146) / [BOJ 2178](https://www.acmicpc.net/problem/2178) / [BOJ 7576](https://www.acmicpc.net/problem/7576) / [BOJ 1931](https://www.acmicpc.net/problem/1931)  
 [BOJ 1541](https://www.acmicpc.net/problem/1541) / [BOJ 1744](https://www.acmicpc.net/problem/1744) / [BOJ 2875](https://www.acmicpc.net/problem/2875) / [BOJ 1783](https://www.acmicpc.net/problem/1783) / [BOJ 1080](https://www.acmicpc.net/problem/1080)  
 [BOJ 2873](https://www.acmicpc.net/problem/2873) / [BOJ 11729](https://www.acmicpc.net/problem/11729) / [BOJ 2110](https://www.acmicpc.net/problem/2110) / [BOJ 1561](https://www.acmicpc.net/problem/1561) / [BOJ 2022](https://www.acmicpc.net/problem/2022)  
