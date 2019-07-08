@@ -32,7 +32,7 @@
 
 ## 왜 틀렷는지 모르는 코드
 * [BOJ 11377](https://www.acmicpc.net/problem/11377) 
-결과 : WA [내 코드 보기](https://github.com/lkoiescg2031/APSS/blob/master/Baekjoon%20Online%20Judge/11377_WA.cpp)  
+결과 : [WA_CODE](https://github.com/lkoiescg2031/APSS/blob/master/Baekjoon%20Online%20Judge/11377_WA.cpp)  
 
 ## 해결한 코드
 * [BOJ 11004](https://www.acmicpc.net/problem/11004)   
