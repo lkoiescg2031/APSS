@@ -99,8 +99,8 @@
 		* Minimun Cost Maximum Flow (MCMF)
 			* Using Bellman-Ford Algorithm of SPFA
 			* Using Dijkstra Algorithm with potential
-<!--		* Cycle Canceling-->
 		* Bipartite Matching
+<!--		* Cycle Canceling-->
 ## 학습 로드 맵
 ![PS ROADMAP](https://github.com/lkoiescg2031/APSS/blob/master/Roadmap.png)
 출처 : <https://stack07142.tistory.com/228>
