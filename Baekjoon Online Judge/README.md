@@ -36,8 +36,8 @@
 
 ## 해결한 코드
 * [BOJ 11004](https://www.acmicpc.net/problem/11004)   
-[내 코드 보기] (https://github.com/lkoiescg2031/APSS/blob/master/Baekjoon%20Online%20Judge/11004.cpp) 
-[해결 방법 보기] (https://lkoiescg2031.tistory.com/19)
+[내 코드 보기](https://github.com/lkoiescg2031/APSS/blob/master/Baekjoon%20Online%20Judge/11004.cpp) 
+[해결 방법 보기](https://lkoiescg2031.tistory.com/19)
 	  
 # 다시 풀어보기
 [BOJ 11004](https://www.acmicpc.net/problem/11004) / [BOJ 2146](https://www.acmicpc.net/problem/2146) / [BOJ 2178](https://www.acmicpc.net/problem/2178) / [BOJ 7576](https://www.acmicpc.net/problem/7576) / [BOJ 1931](https://www.acmicpc.net/problem/1931) / 
