@@ -35,8 +35,8 @@
 결과 : [WA_CODE](https://github.com/lkoiescg2031/APSS/blob/master/Baekjoon%20Online%20Judge/11377_WA.cpp)  
 
 ## 해결한 코드
-* [BOJ 11004](https://www.acmicpc.net/problem/11004)	
-[내 코드 보기](https://github.com/lkoiescg2031/APSS/blob/master/Baekjoon%20Online%20Judge/11004.cpp)	
+* [BOJ 11004](https://www.acmicpc.net/problem/11004) / 
+[내 코드 보기](https://github.com/lkoiescg2031/APSS/blob/master/Baekjoon%20Online%20Judge/11004.cpp) / 
 [해결 방법 보기](https://lkoiescg2031.tistory.com/19)
 	  
 # 다시 풀어보기
