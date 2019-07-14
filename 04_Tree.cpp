@@ -3,7 +3,6 @@
 #include <queue>
 #include <algorithm>
 using namespace std;
-
 int v, root_node_number;
 vector<vector<int>> adj;
 vector<int> from, depth;
@@ -257,24 +256,73 @@ int sum(int node, int start, int end, int i, int j) {
 //==================================================================================
 //RSQ 펜윅트리 (바이너리 인덱스 트리, BIT, Binary index tree, Fenwick tree)
 //트리의 크기는 (n+1)만큼 필요
-//차원을 늘릴경우 for문만 한번씩더 중첩시키면 된다.
 #include <vector>
-using namespace std;
+namespace BIT {
+	using namespace std;
 
-int n;
-vector<int> tree(n + 1);
+	template<typename T = int>
+	using BIT = vector<T>;
+	
+	template<typename T =int>
+	void init_tree(BIT<T>& tree,size_t terminal_node_size, T value) {
+		tree = BIT<T>(terminal_node_size + 1, value);
+	}
 
-int sum(int y) {
-	int ret = 0;
-//	for (int i = x; i > 0; i -= (i & -i)) 중첩시킬경우
-	for (int i = y; i > 0; i -= (i & -i))
-		ret += tree[i];
-	return ret;
-}
+	template<typename T = int>
+	void update(BIT<T>& tree,size_t i, T diff) {
+		while (i < tree.size())
+			tree[i] += diff, i += (i & -i);
+	}
 
-void update(int y,int diff) {
-//	for (int i = x; i <= n; i += (i & -i)) 중첩시킬경우
-	for (int i = y; i <= n; i += (i & -i))
-		tree[i] += diff;
+	template<typename T = int>
+	T sum(BIT<T>& tree, size_t i) {
+		T ret = 0;
+		while (i > 0)
+			ret += tree[i], i -= (i & -i);
+	}
+
+	template<typename T = int>
+	T sum(BIT<T> & tree, size_t i, size_t j) {
+		if (j < i) return 0;
+		return sum(tree, j) - sum(tree, i - 1);
+	}
 }
 //===================================================================================
+//2 Demension BIT
+//차원을 늘릴경우 for문만 한번씩더 중첩시키면 된다.
+#include <vector>
+namespace BIT2D {
+	using namespace std;
+	template<typename T = int>
+	using BIT2D = vector<vector<T>>;
+
+	template<typename T = int>
+	void init_tree(BIT2D<T> & tree, size_t i_node_size,size_t j_node_size, T value = 0) {
+		tree = BIT2D<T>(i_node_size, vector<T>(j_node_size, value));
+	}
+
+	template<typename T = int>
+	void update(BIT2D<T> & tree, size_t i,size_t j, T diff) {
+		while (i < tree.size()) {
+			while (j < tree[i].size())
+				tree[i][j] += diff, j += (i & -i);
+			i += (i & -i);
+		}
+	}
+
+	template<typename T = int>
+	T sum(BIT2D<T> & tree, size_t i, size_t j) {
+		T ret = 0;
+		while (i > 0) {
+			while (j < tree[i].size())
+				ret += tree[i][j], j -= (j & -j);
+			i -= (i & -i);
+		}
+	}
+
+	template<typename T = int>
+	T sum(BIT2D<T> & tree, size_t x1, size_t y1,size_t x2,size_t y2) {
+		if (x2 < x1 || y2 < y1) return 0;
+		return sum(tree, x2, y2) - sum(tree, x2, y1 - 1) - sum(tree, x1 - 1, y2) + sum(tree, x1 - 1, y1 - 1);
+	}
+}
