@@ -365,14 +365,16 @@ struct MaximumFlow {
 //=============================================================================
 //이분 매칭(source와 sink 삭제)
 #include <vector>
+using namespace std;
 
-struct MaximumFlow {
+struct Bipartite_matching {
 	int n;
 	int source, sink;
 	vector<vector<int>> graph;
-	vector<bool> check;
+	vector<int> check;
+	int step;
 	vector<int> pred;
-	MaximumFlow(int n) : n(n) {
+	Bipartite_matching(int n) : n(n) {
 		graph.resize(n);
 		check.resize(n);
 		pred.resize(n, -1);
@@ -383,8 +385,8 @@ struct MaximumFlow {
 	bool dfs(int x) {
 		if (x == -1) return true;
 		for (int next : graph[x]) {
-			if (check[next]) continue;
-			check[next] = true;
+			if (check[next] == step) continue;
+			check[next] = step;
 			if (dfs(pred[next])) {
 				pred[next] = x;
 				return true;
@@ -395,10 +397,8 @@ struct MaximumFlow {
 	int flow() {
 		int ans = 0;
 		for (int i = 0; i < n; i++) {
-			fill(check.begin(), check.end(), false);
-			if (dfs(i)) {
-				ans += 1;
-			}
+			step++;
+			if (dfs(i)) ans += 1;
 		}
 		return ans;
 	}
