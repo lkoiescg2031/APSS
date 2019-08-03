@@ -32,7 +32,11 @@
 
 ## MCMF
 [BOJ 10786](https://www.acmicpc.net/problem/10786)
-
+## 오일러 회로
+[BOJ 1199](https://www.acmicpc.net/problem/1199) / 
+## SCC
+[BOJ 2150](https://www.acmicpc.net/problem/2150) / [BOJ 6543](https://www.acmicpc.net/problem/6543) / [BOJ 4196](https://www.acmicpc.net/problem/3977) / [BOJ 2152](https://www.acmicpc.net/problem/2152) / [BOJ 4013](https://www.acmicpc.net/problem/4013) / 
+[BOJ 11097](https://www.acmicpc.net/problem/11097) / [BOJ 1108](https://www.acmicpc.net/problem/1108) / [BOJ 6264](https://www.acmicpc.net/problem/6264)
 # 나의 코드
 
 ## 왜 틀렷는지 모르는 코드
