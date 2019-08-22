@@ -9,15 +9,17 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Programming Challenges", "P
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2019 SDS 알고리즘 특강 입과테스트", "2019 SDS 알고리즘 특강 입과테스트\2019 SDS 알고리즘 특강 입과테스트.vcxproj", "{4728CCE4-21E6-4AF4-9672-DD35AE8CD82B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Algorithm_Note", "Algorithm_Note", "{09A342FF-186A-4A47-8B09-64C2DDE7053D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "algorithm", "algorithm", "{09A342FF-186A-4A47-8B09-64C2DDE7053D}"
 	ProjectSection(SolutionItems) = preProject
-		Algorithm_Note\00_Algorithm_Note.cpp = Algorithm_Note\00_Algorithm_Note.cpp
-		Algorithm_Note\01_How to get input.cpp = Algorithm_Note\01_How to get input.cpp
-		Algorithm_Note\02_data_structure.cpp = Algorithm_Note\02_data_structure.cpp
-		Algorithm_Note\03_traversal.cpp = Algorithm_Note\03_traversal.cpp
-		Algorithm_Note\04_Tree.cpp = Algorithm_Note\04_Tree.cpp
-		Algorithm_Note\05_Graph.cpp = Algorithm_Note\05_Graph.cpp
-		Algorithm_Note\06_Math.cpp = Algorithm_Note\06_Math.cpp
+		lib\algorithm\00_Algorithm_Note.cpp = lib\algorithm\00_Algorithm_Note.cpp
+		lib\algorithm\01_How to get input.cpp = lib\algorithm\01_How to get input.cpp
+		lib\algorithm\02_Data_structure.cpp = lib\algorithm\02_Data_structure.cpp
+		lib\algorithm\03_Traversal.cpp = lib\algorithm\03_Traversal.cpp
+		lib\algorithm\04_Tree.cpp = lib\algorithm\04_Tree.cpp
+		lib\algorithm\05_Graph.cpp = lib\algorithm\05_Graph.cpp
+		lib\algorithm\06_Math.cpp = lib\algorithm\06_Math.cpp
+		lib\algorithm\07_BigInt.cpp = lib\algorithm\07_BigInt.cpp
+		lib\algorithm\08_Geometry.cpp = lib\algorithm\08_Geometry.cpp
 		README.md = README.md
 		Roadmap.png = Roadmap.png
 	EndProjectSection
