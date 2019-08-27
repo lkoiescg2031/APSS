@@ -31,6 +31,7 @@
     <ProjectGuid>{4728CCE4-21E6-4AF4-9672-DD35AE8CD82B}</ProjectGuid>
     <RootNamespace>My2019SDS알고리즘특강</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>특강</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
