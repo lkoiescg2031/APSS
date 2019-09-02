@@ -5,22 +5,26 @@ VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Baekjoon Online Judge", "Baekjoon Online Judge\Baekjoon Online Judge.vcxproj", "{C9BCA556-5ACC-450A-A9CF-46F404F66E25}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Algorithm_Note", "Algorithm_Note", "{80C7A6C7-755C-496A-A822-334E5E262858}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Programming Challenges", "Programming Challenges\Programming Challenges.vcxproj", "{7A21AD3A-DB23-471A-B2FE-B0D131FEEB74}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "algorithm", "algorithm", "{09A342FF-186A-4A47-8B09-64C2DDE7053D}"
 	ProjectSection(SolutionItems) = preProject
-		00_Algorithm_Note.cpp = 00_Algorithm_Note.cpp
-		01_How to get input.cpp = 01_How to get input.cpp
-		02_data_structure.cpp = 02_data_structure.cpp
-		03_traversal.cpp = 03_traversal.cpp
-		04_Tree.cpp = 04_Tree.cpp
-		05_Graph.cpp = 05_Graph.cpp
-		06_Math.cpp = 06_Math.cpp
+		lib\algorithm\00_Algorithm_Note.cpp = lib\algorithm\00_Algorithm_Note.cpp
+		lib\algorithm\01_How to get input.cpp = lib\algorithm\01_How to get input.cpp
+		lib\algorithm\02_Data_structure.cpp = lib\algorithm\02_Data_structure.cpp
+		lib\algorithm\03_Traversal.cpp = lib\algorithm\03_Traversal.cpp
+		lib\algorithm\04_Tree.cpp = lib\algorithm\04_Tree.cpp
+		lib\algorithm\05_Graph.cpp = lib\algorithm\05_Graph.cpp
+		lib\algorithm\06_Math.cpp = lib\algorithm\06_Math.cpp
+		lib\algorithm\07_BigInt.cpp = lib\algorithm\07_BigInt.cpp
+		lib\algorithm\08_Geometry.cpp = lib\algorithm\08_Geometry.cpp
 		README.md = README.md
 		Roadmap.png = Roadmap.png
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Programming Challenges", "Programming Challenges\Programming Challenges.vcxproj", "{7A21AD3A-DB23-471A-B2FE-B0D131FEEB74}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "STL_STUDY", "STL_STUDY", "{8C5A7311-11C7-4B6E-B336-704247CFE6C2}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2019 SDS 알고리즘 특강 입과테스트", "2019 SDS 알고리즘 특강 입과테스트\2019 SDS 알고리즘 특강 입과테스트.vcxproj", "{4728CCE4-21E6-4AF4-9672-DD35AE8CD82B}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "특강", "특강\특강.vcxproj", "{4728CCE4-21E6-4AF4-9672-DD35AE8CD82B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

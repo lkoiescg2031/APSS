@@ -31,7 +31,11 @@
 
 ## MCMF
 [BOJ 10786](https://www.acmicpc.net/problem/10786)
-
+## 오일러 회로
+[BOJ 1199](https://www.acmicpc.net/problem/1199) / 
+## SCC
+[BOJ 2150](https://www.acmicpc.net/problem/2150) / [BOJ 6543](https://www.acmicpc.net/problem/6543) / [BOJ 4196](https://www.acmicpc.net/problem/3977) / [BOJ 2152](https://www.acmicpc.net/problem/2152) / [BOJ 4013](https://www.acmicpc.net/problem/4013) / 
+[BOJ 11097](https://www.acmicpc.net/problem/11097) / [BOJ 1108](https://www.acmicpc.net/problem/1108) / [BOJ 6264](https://www.acmicpc.net/problem/6264)
 # 나의 코드
 
 ## 왜 틀렷는지 모르는 코드
@@ -57,4 +61,5 @@
 [BOJ 11122](https://www.acmicpc.net/problem/11122) / [BOJ 6549](https://www.acmicpc.net/problem/6549) / [BOJ 12738](https://www.acmicpc.net/problem/12738) / [BOJ 2336](https://www.acmicpc.net/problem/2336) / [BOJ 3006](https://www.acmicpc.net/problem/3006) / 
 [BOJ 3653](https://www.acmicpc.net/problem/3653) /  [BOJ 7578](https://www.acmicpc.net/problem/7578) / [BOJ 1280](https://www.acmicpc.net/problem/1280) / [BOJ 12016](https://www.acmicpc.net/problem/12016) / [BOJ 5012](https://www.acmicpc.net/broblem/5012)  
 [BOJ 2243](https://www.acmicpc.net/problem/2243) / [BOJ 9426](https://www.acmicpc.net/problem/9426) / [BOJ 1849](https://www.acmicpc.net/problem/1849) / [BOJ 1168](https://www.acmicpc.net/problem/1168) / [BOJ 1733](https://www.acmicpc.net/problem/1733) / 
-[BOJ 1760](https://www.acmicpc.net/problem/1760) / [BOJ 10319](https://www.acmicpc.net/broblem/10319) / [BOJ 10319](https://www.acmicpc.net/problem/1031) / [BOJ 1031](https://www.acmicpc.net/problem/1031) / 
+[BOJ 1760](https://www.acmicpc.net/problem/1760) / [BOJ 10319](https://www.acmicpc.net/broblem/10319) / [BOJ 10319](https://www.acmicpc.net/problem/1031) / [BOJ 1031](https://www.acmicpc.net/problem/1031) / [BOJ 3020](https://www.acmicpc.net/problem/3020)  
+[BOJ 6416](https://www.acmicpc.net/problem/6416)

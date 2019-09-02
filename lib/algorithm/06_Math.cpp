@@ -78,3 +78,18 @@ long long pisano_period(long long m) {
 			return i + 1;
 	}
 }
+//==============================================================
+#include <tuple>
+
+template<typename T>
+T gcd(T a, T b) {
+	retur b ? gcd(b, a % b) : a;
+}
+
+template<typename T>
+tuple<T, T, T> extended_euclied(T a, T b) {
+	if (b == 0) return make_tuple(a, 1, 0);
+	T gcd, x0, y0;
+	tie(gcd, x0, y0) = extended_euclied(b, a % b);
+	return make_tuple(gcd, y0, x0 - (a / b) * y0);
+}

@@ -264,25 +264,26 @@ namespace BIT {
 	using BIT = vector<T>;
 	
 	template<typename T =int>
-	void init_tree(BIT<T>& tree,size_t terminal_node_size, T value) {
+	void init_tree(BIT<T>& tree, int terminal_node_size, T value) {
 		tree = BIT<T>(terminal_node_size + 1, value);
 	}
 
 	template<typename T = int>
-	void update(BIT<T>& tree,size_t i, T diff) {
+	void update(BIT<T>& tree, int i, T diff) {
 		while (i < tree.size())
 			tree[i] += diff, i += (i & -i);
 	}
 
 	template<typename T = int>
-	T sum(BIT<T>& tree, size_t i) {
+	T sum(BIT<T>& tree, int i) {
 		T ret = 0;
 		while (i > 0)
 			ret += tree[i], i -= (i & -i);
+		return ret;
 	}
 
 	template<typename T = int>
-	T sum(BIT<T> & tree, size_t i, size_t j) {
+	T sum(BIT<T> & tree, int i, int j) {
 		if (j < i) return 0;
 		return sum(tree, j) - sum(tree, i - 1);
 	}
@@ -297,12 +298,12 @@ namespace BIT2D {
 	using BIT2D = vector<vector<T>>;
 
 	template<typename T = int>
-	void init_tree(BIT2D<T> & tree, size_t i_node_size,size_t j_node_size, T value = 0) {
+	void init_tree(BIT2D<T> & tree, int i_node_size, int j_node_size, T value = 0) {
 		tree = BIT2D<T>(i_node_size, vector<T>(j_node_size, value));
 	}
 
 	template<typename T = int>
-	void update(BIT2D<T> & tree, size_t i,size_t j, T diff) {
+	void update(BIT2D<T> & tree, int i, int j, T diff) {
 		while (i < tree.size()) {
 			while (j < tree[i].size())
 				tree[i][j] += diff, j += (i & -i);
@@ -311,7 +312,7 @@ namespace BIT2D {
 	}
 
 	template<typename T = int>
-	T sum(BIT2D<T> & tree, size_t i, size_t j) {
+	T sum(BIT2D<T> & tree, int i, int j) {
 		T ret = 0;
 		while (i > 0) {
 			while (j < tree[i].size())
@@ -321,7 +322,7 @@ namespace BIT2D {
 	}
 
 	template<typename T = int>
-	T sum(BIT2D<T> & tree, size_t x1, size_t y1,size_t x2,size_t y2) {
+	T sum(BIT2D<T> & tree, int x1, int y1, int x2, int y2) {
 		if (x2 < x1 || y2 < y1) return 0;
 		return sum(tree, x2, y2) - sum(tree, x2, y1 - 1) - sum(tree, x1 - 1, y2) + sum(tree, x1 - 1, y1 - 1);
 	}
