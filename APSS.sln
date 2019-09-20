@@ -22,7 +22,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "algorithm", "algorithm", "{
 		Roadmap.png = Roadmap.png
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "STL_STUDY", "STL_STUDY", "{8C5A7311-11C7-4B6E-B336-704247CFE6C2}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{8C5A7311-11C7-4B6E-B336-704247CFE6C2}"
+	ProjectSection(SolutionItems) = preProject
+		lib\math.cpp = lib\math.cpp
+		lib\queue.cpp = lib\queue.cpp
+		lib\vector.cpp = lib\vector.cpp
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "특강", "특강\특강.vcxproj", "{4728CCE4-21E6-4AF4-9672-DD35AE8CD82B}"
 EndProject
