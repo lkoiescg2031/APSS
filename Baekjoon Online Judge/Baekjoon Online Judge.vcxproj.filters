@@ -13,7 +13,10 @@
     <ClCompile Include="11377_WA.cpp">
       <Filter>Not_AC</Filter>
     </ClCompile>
-    <ClCompile Include="3878.cpp">
+    <ClCompile Include="3878_WA.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2561.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
