@@ -1,0 +1,17 @@
+*.obj
+*.enc
+*.ipch
+*.exe
+*.ilk
+*.pdb
+*.idb
+*.tlog
+*.log
+*.hwp
+*.db
+*.db
+*.suo
+*.gitignore
+.vs
+x64
+Debug
