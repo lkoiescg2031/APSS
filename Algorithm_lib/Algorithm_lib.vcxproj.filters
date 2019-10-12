@@ -7,14 +7,11 @@
     <Filter Include="lib">
       <UniqueIdentifier>{04471d26-ffca-4b2d-b817-578238ab84a5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="lib\container">
+      <UniqueIdentifier>{255ce6ce-99f3-4ad8-87fe-c48e0379e88b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="queue.cpp">
-      <Filter>lib</Filter>
-    </ClCompile>
-    <ClCompile Include="vector.cpp">
-      <Filter>lib</Filter>
-    </ClCompile>
     <ClCompile Include="math.cpp">
       <Filter>lib</Filter>
     </ClCompile>
@@ -45,5 +42,14 @@
     <ClCompile Include="note\08_Geometry.cpp">
       <Filter>note</Filter>
     </ClCompile>
+    <ClCompile Include="queue.cpp">
+      <Filter>lib\container</Filter>
+    </ClCompile>
+    <ClCompile Include="vector.cpp">
+      <Filter>lib\container</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
   </ItemGroup>
 </Project>
