@@ -1,7 +1,6 @@
 # APSS (Alogrithmic Problem Solveing Strategies)  
 
 알고리즘 문제 해결기법 학습을 하기 위한 목적으로 생성된 저장소
-[TISTORY Blog 링크](https://lkoiescg2031.tistory.com/category/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)
 
 ### github 저장소 관리 로그  
 
