@@ -1,5 +1,5 @@
  //=======================================================================
-//À§»óÁ¤·Ä
+//ìœ„ìƒì •ë ¬
 //Topological Sort
 #include <queue>
 using namespace std;
@@ -96,9 +96,9 @@ void kruskal() {
 	}
 }
 //===========================================================================
-//ÃÖ´Ü°æ·Î (Bellman-Ford) 
-//À½¼ö °¡ÁßÄ¡°¡ Á¸ÀçÇÒ °æ¿ì¿¡µµ °è»ê
-//À½¼ö »çÀÌÅ¬ È®ÀÎ °¡´É
+//ìµœë‹¨ê²½ë¡œ (Bellman-Ford) 
+//ìŒìˆ˜ ê°€ì¤‘ì¹˜ê°€ ì¡´ì¬í•  ê²½ìš°ì—ë„ ê³„ì‚°
+//ìŒìˆ˜ ì‚¬ì´í´ í™•ì¸ ê°€ëŠ¥
 #include <tuple>
 #include <vector>
 using namespace std;
@@ -126,8 +126,8 @@ void Bellman_Ford() {
 		}
 }
 //===========================================================================
-//ÃÖ´Ü°æ·Î (dijkstra) O(v^2)
-//À½¼ö °æ·Î°¡ Á¸ÀçÇÒ °æ¿ì ºÒ°¡´É
+//ìµœë‹¨ê²½ë¡œ (dijkstra) O(v^2)
+//ìŒìˆ˜ ê²½ë¡œê°€ ì¡´ì¬í•  ê²½ìš° ë¶ˆê°€ëŠ¥
 #include <tuple>
 #include <queue>
 using namespace std;
@@ -164,8 +164,8 @@ void dijkstra() {
 	}
 }
 //===========================================================================
-//ÃÖ´Ü°æ·Î (Floyd) O(v^3)
-//¸ğµç ÃÖ´Ü°æ·Î °Ë»ö
+//ìµœë‹¨ê²½ë¡œ (Floyd) O(v^3)
+//ëª¨ë“  ìµœë‹¨ê²½ë¡œ ê²€ìƒ‰
 #include <vector>
 using namespace std;
 
@@ -174,7 +174,7 @@ vector<vector<int>> graph6, dist_floyd;
 
 void Floyd_Warshal() {
 	dist_floyd = graph6;
-	//ÃßÀûÀ» À§ÇÑ ¹è¿­
+	//ì¶”ì ì„ ìœ„í•œ ë°°ì—´
 	vector<vector<int>> from(v + 1, vector<int>(v + 1, 0));
 	for (int i = 1; i <= v; i++)
 		for (int j = 1; j <= v; j++)
@@ -189,7 +189,7 @@ void Floyd_Warshal() {
 				}
 }
 //=============================================================================
-//SPFA Æò±Õ O(E)
+//SPFA í‰ê·  O(E)
 #include <queue>
 using namespace std;
 
@@ -226,7 +226,7 @@ void SPFA() {
 	}
 }
 //=============================================================================
-//Ford-Pulkerson (³×Æ®¿öÅ© ÇÃ·Î¿ì) O(Ef)
+//Ford-Pulkerson (ë„¤íŠ¸ì›Œí¬ í”Œë¡œìš°) O(Ef)
 #include <vector>
 #include <algorithm>
 using namespace std;
@@ -289,7 +289,7 @@ struct MaximumFlow {
 	}
 };
 //=============================================================================
-//Edmond-karp (³×Æ®¿öÅ© ÇÃ·Î¿ì) O(VE^2)
+//Edmond-karp (ë„¤íŠ¸ì›Œí¬ í”Œë¡œìš°) O(VE^2)
 #include <queue>
 using namespace std;
 
@@ -363,7 +363,7 @@ struct MaximumFlow {
 	}
 };
 //=============================================================================
-//ÀÌºĞ ¸ÅÄª(source¿Í sink »èÁ¦)
+//ì´ë¶„ ë§¤ì¹­(sourceì™€ sink ì‚­ì œ)
 #include <vector>
 using namespace std;
 

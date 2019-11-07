@@ -10,7 +10,7 @@ queue<int> qn;
 
 int LCA(int x,int y) {
 
-	//¼±ÇàÃ³¸®
+	//ì„ í–‰ì²˜ë¦¬
 	v = adj.size();
 	from = depth = vector<int>(v + 1);
 	qn.push(root_node_number);
@@ -25,7 +25,7 @@ int LCA(int x,int y) {
 				qn.push(i);
 			}
 	}
-	//LCA ºÎºĞ
+	//LCA ë¶€ë¶„
 	if (depth[x] < depth[y]) swap(x, y);	
 	while (depth[x] != depth[y]) x = from[x];
 	while (x != y) x = from[x], y = from[y];
@@ -46,11 +46,11 @@ vector<vector<int>> adj;
 vector<int> from, depth;
 queue<int> qn;
 
-int parent[100001][tree_high_max];//dp[i][j] = iÀÇ 2^j¹øÂ° Á¶»ó
+int parent[100001][tree_high_max];//dp[i][j] = iì˜ 2^jë²ˆì§¸ ì¡°ìƒ
 
 int LCA(int x, int y) {
 
-	//¼±ÇàÃ³¸®
+	//ì„ í–‰ì²˜ë¦¬
 	v = adj.size();
 	from = depth = vector<int>(v + 1);
 	qn.push(root_node_number);
@@ -65,7 +65,7 @@ int LCA(int x, int y) {
 				qn.push(i);
 			}
 	}
-	//dp ÃÊ±âÈ­
+	//dp ì´ˆê¸°í™”
 	for (int i = 1; i <= v; i++)
 		parent[i][0] = from[i];
 
@@ -75,7 +75,7 @@ int LCA(int x, int y) {
 			if (parent[i][j - 1] != 0) 
 				parent[i][j] = parent[parent[i][j - 1]][j - 1];
 
-	//LCA ºÎºĞ
+	//LCA ë¶€ë¶„
 	if (depth[x] < depth[y]) swap(x, y);
 	int log = 1; for (; (1 << log) <= x; log++); log--;
 
@@ -148,7 +148,7 @@ const int null = 0x3f3f3f3f;
 int n;
 vector<int> num_list;
 vector<int> tree;
-//Æ®¸®ÀÇ ³ôÀÌ H = [log N], ³ëµåÀÇ ¼ö tree_size = 2^(H+1);
+//íŠ¸ë¦¬ì˜ ë†’ì´ H = [log N], ë…¸ë“œì˜ ìˆ˜ tree_size = 2^(H+1);
 //int tree_high = ceil(log2(n)); //#include <cmath>
 //int tree_size = (1 << (tree_high + 1));
 
@@ -162,8 +162,8 @@ void init(int node = 1, int src =0, int des=n-1) {
 	tree[node] = min(tree[node * 2], tree[node * 2 + 1]);
 }
 
-int query(int i, int j, //°Ë»öÇÑ ¹üÀ§
-	int node = 1, int src = 1, int des = n) {//ÇöÀç Å½»öÁßÀÎ ³ëµåÀÇ ¹üÀ§
+int query(int i, int j, //ê²€ìƒ‰í•œ ë²”ìœ„
+	int node = 1, int src = 1, int des = n) {//í˜„ì¬ íƒìƒ‰ì¤‘ì¸ ë…¸ë“œì˜ ë²”ìœ„
 	if (des < i || j < src) return null;
 	if (i <= src && des <= j) return tree[node];
 	int left = query(i, j, node * 2, src, (src + des) / 2);
@@ -174,12 +174,12 @@ int query(int i, int j, //°Ë»öÇÑ ¹üÀ§
 }
 //=================================================================================
 // RSQ
-// segment tree - ºñÀç±Í·Î ±¸Çö
+// segment tree - ë¹„ì¬ê·€ë¡œ êµ¬í˜„
 #include <vector>
 using namespace std;
 
 int n, terminal_node_start;
-vector<int> tree; // tree¹è¿­ÀÇ Å©±â nÀº 2^k ²ÃÀÌ¾î¾ß ÇÔ
+vector<int> tree; // treeë°°ì—´ì˜ í¬ê¸° nì€ 2^k ê¼´ì´ì–´ì•¼ í•¨
 
 void terminal_node_cal() {
 	terminal_node_start = 1;
@@ -205,7 +205,7 @@ int sum(int i, int j) {
 }
 //=================================================================================
 //segment tree - lazy propagation
-//¼¼±×¸ÕÆ® Æ®¸® ±¸°£ ¾÷µ¥ÀÌÆ®¸¦ lazy propagationÀ¸·Î °è»ê
+//ì„¸ê·¸ë¨¼íŠ¸ íŠ¸ë¦¬ êµ¬ê°„ ì—…ë°ì´íŠ¸ë¥¼ lazy propagationìœ¼ë¡œ ê³„ì‚°
 #include <vector>
 using namespace std;
 
@@ -254,8 +254,8 @@ int sum(int node, int start, int end, int i, int j) {
 		sum(2 * node + 1, (start + end) / 2 + 1, end, i, j);
 }
 //==================================================================================
-//RSQ ÆæÀ¨Æ®¸® (¹ÙÀÌ³Ê¸® ÀÎµ¦½º Æ®¸®, BIT, Binary index tree, Fenwick tree)
-//Æ®¸®ÀÇ Å©±â´Â (n+1)¸¸Å­ ÇÊ¿ä
+//RSQ íœìœ…íŠ¸ë¦¬ (ë°”ì´ë„ˆë¦¬ ì¸ë±ìŠ¤ íŠ¸ë¦¬, BIT, Binary index tree, Fenwick tree)
+//íŠ¸ë¦¬ì˜ í¬ê¸°ëŠ” (n+1)ë§Œí¼ í•„ìš”
 #include <vector>
 namespace BIT {
 	using namespace std;
@@ -290,7 +290,7 @@ namespace BIT {
 }
 //===================================================================================
 //2 Demension BIT
-//Â÷¿øÀ» ´Ã¸±°æ¿ì for¹®¸¸ ÇÑ¹ø¾¿´õ ÁßÃ¸½ÃÅ°¸é µÈ´Ù.
+//ì°¨ì›ì„ ëŠ˜ë¦´ê²½ìš° forë¬¸ë§Œ í•œë²ˆì”©ë” ì¤‘ì²©ì‹œí‚¤ë©´ ëœë‹¤.
 #include <vector>
 namespace BIT2D {
 	using namespace std;

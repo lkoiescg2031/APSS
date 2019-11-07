@@ -2,9 +2,9 @@
 using namespace std;
  
 int main() {
-	//ÀÔÃâ·Â °ü·Ã
-	ios_base::sync_with_stdio(false);// ºü¸¥ ÀÔÃâ·Â
-	cin.tie(NULL);// ºü¸¥ ÀÔÃâ·Â
+	//ì…ì¶œë ¥ ê´€ë ¨
+	ios_base::sync_with_stdio(false);// ë¹ ë¥¸ ì…ì¶œë ¥
+	cin.tie(NULL);// ë¹ ë¥¸ ì…ì¶œë ¥
 	//=============================================
 	//code here
 

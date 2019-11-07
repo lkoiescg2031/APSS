@@ -1,5 +1,5 @@
 //====================================================================
-//¾Æ¸®½ºÅäÅ×³×½ºÀÇ Ã¼
+//ì•„ë¦¬ìŠ¤í† í…Œë„¤ìŠ¤ì˜ ì²´
 #include <vector>
 using namespace std;
 vector<int> np;
@@ -10,7 +10,7 @@ void init(int n) {
 				np[j] = true;
 }
 //====================================================================
-//matrix ¿¬»ê ¼Ò½ºÄÚµå
+//matrix ì—°ì‚° ì†ŒìŠ¤ì½”ë“œ
 #include <array>
 using namespace std;
 
@@ -29,9 +29,9 @@ Mat<t, i, k> operator* (const Mat<t, i, j>& left, const Mat<t, j, k>& right) {
 	return ret;
 }
 //====================================================================
-//fibonacci °ü·Ã
+//fibonacci ê´€ë ¨
 
-//Çà·ÄÀÇ °öÀ» ÀÌ¿ë
+//í–‰ë ¬ì˜ ê³±ì„ ì´ìš©
 long long get_fib(long long n) {
 	Mat<long long, 2> ret, fib;
 
@@ -50,8 +50,8 @@ long long get_fib(long long n) {
 	return fib[0][1];
 }
 
-// ºĞÇÒÁ¤º¹À» ÀÌ¿ëÇÑ ÇÇº¸³ªÄ¡ °è»ê
-// ºü¸¥ °è»êÀ» ÇÏ·Á¸é ¸Ş¸ğÀÌÁ¦ÀÌ¼Ç ÇÊ¿ä
+// ë¶„í• ì •ë³µì„ ì´ìš©í•œ í”¼ë³´ë‚˜ì¹˜ ê³„ì‚°
+// ë¹ ë¥¸ ê³„ì‚°ì„ í•˜ë ¤ë©´ ë©”ëª¨ì´ì œì´ì…˜ í•„ìš”
 long long fib(long long n) {
 	long long tmp, tmp2;
 	if (n == 0) return 0;
@@ -66,7 +66,7 @@ long long fib(long long n) {
 	return (2 * tmp + tmp2) * tmp2;
 }
 
-//ÇÇ»ç³ë ÁÖ±â
+//í”¼ì‚¬ë…¸ ì£¼ê¸°
 long long pisano_period(long long m) {
 
 	int f0 = 0, f1 = 1, f2 = f0 + f1;
