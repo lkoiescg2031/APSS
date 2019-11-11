@@ -8,6 +8,15 @@
     "xlocmon": "cpp",
     "xmemory": "cpp",
     "xtree": "cpp",
-    "*.tcc": "cpp"
+    "*.tcc": "cpp",
+    "filesystem": "cpp",
+    "iosfwd": "cpp",
+    "xlocnum": "cpp",
+    "xloctime": "cpp",
+    "complex": "cpp",
+    "list": "cpp",
+    "functional": "cpp",
+    "random": "cpp",
+    "limits": "cpp"
   }
 }
