@@ -1,0 +1,13 @@
+{
+  "files.associations": {
+    "deque": "cpp",
+    "map": "cpp",
+    "regex": "cpp",
+    "type_traits": "cpp",
+    "unordered_map": "cpp",
+    "xlocmon": "cpp",
+    "xmemory": "cpp",
+    "xtree": "cpp",
+    "*.tcc": "cpp"
+  }
+}
