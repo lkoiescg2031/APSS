@@ -17,6 +17,7 @@
     "list": "cpp",
     "functional": "cpp",
     "random": "cpp",
-    "limits": "cpp"
+    "limits": "cpp",
+    "iostream": "cpp"
   }
 }
