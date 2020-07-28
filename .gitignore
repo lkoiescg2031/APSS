@@ -4,3 +4,7 @@ data
 *.hwp
 *.inp
 *.out
+*.db
+*.ipch
+*.suo
+*.sqlite
