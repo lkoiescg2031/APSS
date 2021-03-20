@@ -1,5 +1,6 @@
 {
   "files.associations": {
+    "ostream": "cpp",
     "deque": "cpp",
     "map": "cpp",
     "regex": "cpp",
